@@ -18,6 +18,7 @@ int solve(TreeNode* root,int maxi){
      if(root==NULL) return 0;
     int count=0;
         if(root->val>=maxi){
+            maxi=root->val;
             count++;
         }
         return count+solve(root->left,max(root->val,maxi))+solve(root->right,max(root->val,maxi));
