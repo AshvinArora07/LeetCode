@@ -1,4 +1,4 @@
-/*
+//Iterative
 class Solution {
 public:
     int climbStairs(int n) {
@@ -25,7 +25,8 @@ public:
         return  climbStairs(n-1)+climbStairs(n-2); // from nth stair to the 0th stair                                                     
     }
 };
-*/
+
+//DP
 class Solution {
 public:
     int climbStairs(int n) {
