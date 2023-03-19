@@ -14,8 +14,8 @@ public:
             }
             else{
                 high++;
-                if(high<s)
-                    sum+=nums[high];
+                if(high<s)    // In a case suppose the sum comes to be smaller than target then we increase the size of window 
+                    sum+=nums[high];// by increasing high (but while increasing to check if it does not go out of bonds.)
             }
         }
         return minlen==INT_MAX?0:minlen;
