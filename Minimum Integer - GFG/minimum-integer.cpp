@@ -36,7 +36,7 @@ class Solution {
         for(int i : A)
             sum += i;
         for(int X : A)
-            if((long)X*N >= sum && mmin > X)
+            if((long)X*N >= sum && mmin > X)// Checking for the element in the array we are calculating prouct(X*N) is the minimum element to satisfy the conditon(X*N<=S)
                 {
                     mmin = X;
                 }
