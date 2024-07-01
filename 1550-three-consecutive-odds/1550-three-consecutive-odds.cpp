@@ -1,3 +1,4 @@
+/*
 class Solution {
 public:
     bool threeConsecutiveOdds(vector<int>& arr) {
@@ -11,4 +12,21 @@ public:
         }
         return false;
     }
+};
+*/ 
+//It can also be done by iterating over the array and counting till we get 3 odd consecutive nos.
+class Solution {
+public:
+    bool threeConsecutiveOdds(vector<int>& arr) {
+        int count=0;
+        for (int num: arr){
+            if(num%2!=0){
+                count++;
+                if(count==3)
+                    return true;
+                }
+                 else count=0;
+            }
+                return false;
+         }
 };
