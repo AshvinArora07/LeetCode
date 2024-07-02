@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+/*
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
@@ -37,5 +38,27 @@ public:
             result.push_back(node->val);
         }
         return result;
+    }
+};
+*/
+
+// A recursive approach where the time complexity is equivalent to the level of a Binary Tree which is O(H)
+
+class Solution {
+    public:
+        vector<int> rightSideView(TreeNode* root){
+        vector<int> res;
+        recursion(root,0,res);
+        return res;
+    }
+    private:
+        void recursion(TreeNode* root,int level,vector<int> &res){
+        if(root ==NULL)
+            return ;
+        if(level==res.size())
+            res.push_back(root->val);
+        recursion(root->right,level+1,res);
+        recursion(root->left,level+1,res);
+        
     }
 };
